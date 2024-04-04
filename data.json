@@ -1,0 +1,78 @@
+[
+    {
+        "slug": "nouilles_poulet_caramel",
+        "category": "nouilles",
+        "title": "Nouilles sautées au poulet caramélisés",
+        "price":15,
+        "description": "De délicieuses nouilles mélangés avec du poulet et de la sauce caramélisés","img":"/assets/nouillescaramel.jpg"
+    },
+    
+    {
+        "slug": "nouilles_poulet_curry",
+        "category": "nouilles",
+        "title": "Nouilles sautées au poulet curry",
+        "price":15,
+        "description": "De délicieuses nouilles mélangés avec du poulet et de la sauce curry",
+        "img":"/assets/nouillescurry.jpg"
+    },
+
+    {
+        "slug": "nouilles_poulet_soja",
+        "category": "nouilles",
+        "title": "Nouilles sautées au poulet soja",
+        "price":15,
+        "description": "De délicieuses nouilles mélangés avec du poulet et de la sauce soja",
+        "img":"/assets/nouillessoja.jpg"
+    },
+
+
+
+    {
+        "slug": "sandwish_poulet",
+        "category": "sandwish",
+        "title": "Sandwish Poulet",
+        "price":10,
+        "description": "Un délicieux sandwish Poulet",
+        "img":"/assets/sandwishpoulet.jpg"
+    },
+
+    {"slug": "sandwish_hamburger",
+    "category": "sandwish",
+    "title": "Sandwish Hamburger",
+    "price":10,
+    "description": "Un délicieux sandwish Hamburger",
+    "img":"/assets/sandwishhamburger.jpg"},
+
+    {"slug": "sandwish_mexicano","category": "sandwish","title": "Sandwish Mexicano","price":10,"description": "Un délicieux sandwish Mexicano","img":"/assets/sandwishmexicano.jfif"},
+
+    {"slug": "sandwish_kebab","category": "sandwish","title": "Sandwish Kebab","price":10,"description": "Un délicieux sandwish Kebab","img":"/assets/sandwishkebab.jpg"},
+
+
+
+    
+    {"slug": "durum_poulet","category": "durum","title": "Durum Poulet","price":10,"description": "Un délicieux durum Poulet","img":"/assets/durumpoulet.jpg"},
+
+    {"slug": "durum_hamburger","category": "durum","title": "Durum Hamburger","price":10,"description": "Un délicieux durum Hamburger","img":"/assets/durumhamburger.png"},
+
+    {"slug": "durum_mexicano","category": "durum","title": "Durum Mexicano","price":10,"description": "Un délicieux durum Mexicano","img":"/assets/durummexicano.png"},
+
+    {"slug": "durum_kebab","category": "durum","title": "Durum Kebab","price":10,"description": "Un délicieux durum Kebab","img":"/assets/durumkebab.png"},
+
+
+    
+    {"slug": "boisson_cocacola","category": "boisson","title": "Coca Cola","price":1,"description": "Un délicieux Coca Cola","img":"/assets/coca.jpg"},
+
+    {"slug": "boisson_fanta","category": "boisson","title": "Fanta","price":1,"description": "Un délicieux Fanta","img":"/assets/fanta.jpg"},
+
+    {"slug": "boisson_sprite","category": "boisson","title": "Sprite","price":1,"description": "Un délicieux Sprite","img":"/assets/sprite.jfif"},
+
+    {"slug": "boisson_uludag","category": "boisson","title": "Uludag","price":1,"description": "Un délicieux Uludag","img":"/assets/uludag.jpg"},
+
+    {"slug": "boisson_poms","category": "boisson","title": "Poms","price":1,"description": "Un délicieux Poms","img":"/assets/poms.gif"},
+    {"slug": "boisson_hawai","category": "boisson","title": "Hawai","price":1,"description": "Un délicieux Hawai","img":"/assets/hawai.jpg"}
+
+
+
+
+
+]
