@@ -92,8 +92,7 @@ return ( <>
         <div className='flexcard'>
 
     {chargee ? 
-    data
-        .filter((book) => book.title.toLowerCase().includes(search.toLowerCase()))
+    data        .filter((book) => book.title.toLowerCase().includes(search.toLowerCase()))
         .sort((a, b) => bookfilter === "az" ? a.title.localeCompare(b.title) : 0)
         .map((book, index) => (           
         canishow(book) &&       

@@ -6,8 +6,7 @@ export const counterSlice = createSlice({
     initialState: {
         darkmode: true,
 
-        newusername : "",
-        newpassword : "",
+
 
         basededonnee : [ {username: "test", password: "test"}  ], 
         
