@@ -9,7 +9,8 @@ export const counterSlice = createSlice({
         newusername : "",
         newpassword : "",
 
-        basededonnee : [ {username: "test", password: "test"}  ],
+        basededonnee : [ {username: "test", password: "test"}  ], 
+        
 
         isconnected: false,
         prixtotal: 0,
