@@ -79,7 +79,7 @@ return (<>
                      >Ajouter au panier</button>
 
                      {/* ajouter aux favoris */}
-                    <button className={book.like==true ? "addtocart heart" : "addtocart"} onClick={  (e)=>{
+                    <button className="addtocart" onClick={  (e)=>{
                     dispatch(addtofavori({id: book.id, 
                     img: book.image_url, 
                     title: book.title,
