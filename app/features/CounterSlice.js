@@ -11,7 +11,7 @@ export const counterSlice = createSlice({
         basededonnee : [ {username: "test", password: "test"}  ], 
         
 
-        isconnected: true,
+        isconnected: false,
         prixtotal: 0,
         panier: [],
         favoris : [],
