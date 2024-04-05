@@ -15,7 +15,7 @@ return(<>
     <section className={darkmode ? "spanier containerarticles darkbg" : "spanier containerarticles"}>
         {/* pas connecté */}
         {isconnected== false ?
-            <div className='flexcolumn'>
+            <div className='flexcolumn transitiontopbottom'>
                 <Link href="/connexion/">
                     <div className='yourcart iwant'>
                         Connectez-vous ou créez un compte pour voir vos favoris !
@@ -24,7 +24,7 @@ return(<>
             </div>
     : <>
         {/* connecté */}
-    <div className='flexcolumn'>
+    <div className='flexcolumn transitiontopbottom'>
 
             {favoris.length ==0 ? 
                 <div className='flexcolumn'>

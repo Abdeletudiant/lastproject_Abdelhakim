@@ -18,7 +18,7 @@ return(<>
     
     {isconnected== false &&  <>
         <section className={darkmode ? "spanier containerarticles darkbg" : "spanier containerarticles"}>
-        <div className='flexcolumn'>
+        <div className='flexcolumn transitiontopbottom'>
             <Link href="/connexion/">
                 <div className='yourcart iwant'>Connectez-vous ou créez un compte pour utiliser votre panier !</div>
             </Link>
@@ -31,7 +31,7 @@ return(<>
 
 
         <section className={darkmode ? "spanier containerarticles darkbg" : "spanier containerarticles"}>
-        <div className='flexcolumn'>
+        <div className='flexcolumn transitiontopbottom'>
             <div className='yourcart'>Votre panier est vide !</div>
         </div>
         </section>
@@ -43,7 +43,7 @@ return(<>
         <>
     <section className={darkmode ? "spanier containerarticles darkbg" : "spanier containerarticles"}>
 
-        <div className='flexcolumn'>
+        <div className='flexcolumn transitiontopbottom'>
             <div className='yourcart'>Your Cart({panier.length})</div>
 
             {panier.map((book,index) => (
@@ -62,10 +62,10 @@ return(<>
         </div>
 
         
-            <div className={darkmode ? "summary bgwhitepanier" : "summary  bgblack"}>
+            <div className={darkmode ? "summary bgwhitepanier transitionlefttoright" : "summary  bgblack transitionlefttoright"}>
                 <p className={darkmode ? "textaligncenter ipay pwhite" : "textaligncenter ipay pwhite"} >Total</p>
                 <div className='centerbtn'>
-                    <button className='btnpaynow' onClick={()=>{ dispatch(buynow()),  setPayee(true)}}>Buy Now</button>
+                    <button className='btnpaynow addtocart2' onClick={()=>{ dispatch(buynow()),  setPayee(true)}}>Buy Now</button>
                 </div>
                 
 
@@ -78,7 +78,7 @@ return(<>
         {panier.length == 0 && payee==true &&  isconnected== true && <>
         <section className={darkmode ? "spanier containerarticles darkbg" : "spanier containerarticles"}>
 
-        <div className='flexcolumn'>
+        <div className='flexcolumn transitiontopbottom'>
             <div className='yourcart'>Thanks you for your order !</div>
         </div>
         </section>

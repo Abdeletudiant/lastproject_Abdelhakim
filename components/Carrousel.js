@@ -46,7 +46,7 @@ return(<>
     
     
         
-            <div className="window_showimg">
+            <div className="window_showimg transitionlefttoright">
                 <div className={
                     click === 0 ? "fleximg click0" :
                     click === 1 ? "fleximg click1" :
@@ -91,7 +91,7 @@ return(<>
                     
                 </div>
             </div>
-            <div className="flexbtn">
+            <div className="flexbtn transitionlefttoright">
                 <button onClick={()=>{previous()}} className="btnactivcarousel"><AiOutlineArrowLeft /></button>
                 <button onClick={()=>{next()}} className="btnactivcarousel"><AiOutlineArrowRight /></button>
             </div>

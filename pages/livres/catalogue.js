@@ -61,18 +61,27 @@ export default function Article() {
         }
     }
 
-
+    function removebgred(e) {
+        e.target.classList.remove('heart');        
+    }
+    // function removebgred2(e) {
+    //     e.target.classList.remove('heart');        
+    // }
+    function removebgred3(e) {
+        e.target.parentElement.classList.remove('heart');    
+        e.target.parentElement.parentElement.classList.remove('heart');     
+    }
 
     // const [currentPageState, setcurrentPageState] = useState(1)
 return ( <>
     <Navbar />
 
     <section className={darkmode ? "containerarticles darkbg" : "containerarticles"}>
-        <div className='centerinput'>
+        <div className='centerinput transitiontopbottom'>
             <input type="text" onChange={(e)=>{setSearh(e.target.value)}} className='inputsearch' placeholder="Recherchez un livre" />
         </div>
 
-        <div className='endselect'>
+        <div className='endselect transitionlefttoright'>
             <select className='select mb50px' id='' onChange={valuefiltre} >
                 <option value="All">Tout les livres</option>
                 <option value="moins100 pages">-100 pages</option>
@@ -89,25 +98,20 @@ return ( <>
         
 
 
-        <div className='flexcard'>
+        <div className='flexcard '>
 
     {chargee ? 
     data        .filter((book) => book.title.toLowerCase().includes(search.toLowerCase()))
         .sort((a, b) => bookfilter === "az" ? a.title.localeCompare(b.title) : 0)
         .map((book, index) => (           
         canishow(book) &&       
-            <div key={index} className={darkmode ? "card pinkshadow" : "card greyshadow"}>
+            <div key={index} className={darkmode ? "card pinkshadow transitionrighttoleft" : "card greyshadow transitionrighttoleft"}>
                 <Link key={index} href={"/livres/"+book.id}>
                 <img src={book.image_url} className="cardimg" alt={book.title} /></Link>
                 <div className="infocard">
                     <p id='title' className={darkmode ? "textaligncenter pwhite" : "textaligncenter pblack"}>{book.title}</p>
                     <p  className={darkmode ? "textaligncenter pwhite mb20px" : "textaligncenter pblack mb20px"}>Notes : {book.rating} <AiFillStar className={darkmode ? "yellow" :"lightstar"} /></p>
-
                     <p  className={darkmode ? "textaligncenter pwhite mb20px" : "textaligncenter pblack mb20px"}>Pages : {book.num_pages} </p>
-
-                    
-
-
                     {isconnected == false  ? 
                         <Link href="/connexion/">
                             <p id='link' className={darkmode ? "textaligncenter pwhite" : "textaligncenter pblack"}>Connectez-vous pour ajouter au panier ou aux favoris</p>
@@ -121,12 +125,12 @@ return ( <>
                         }) 
                     )}}
                      >Ajouter au panier</button>
-                    <button className='heart addtocart' onClick={  ()=>{dispatch(addtofavori({
+                    <button className='heart addtocart' onClick={  (e)=>{dispatch(addtofavori({
                         id: book.id, 
                         img: book.image_url,
                         title: book.title,
                         }) 
-                    )}} ><FaHeart /></button></>
+                    ), removebgred(e) }} ><FaHeart onClick={(e)=>{removebgred3(e)}} /></button></>
                     }
                 </div>
                 

@@ -597,3 +597,60 @@ li {list-style: none; list-style-type: none;}
 .bgwhitepanier {
     background-color: rgb(83, 83, 83);
 }
+
+
+
+
+
+.transitionrighttoleft {
+    animation: cool 1s 1;
+}
+@keyframes cool{
+    0% { 
+        opacity: 0;
+        transform: translateX(-400px);
+     }
+    100% {
+        opacity: 100;
+        transform: translateX(-0px);
+    }
+}
+
+
+/* transitionlefttoright */
+
+.transitionlefttoright {
+    animation: cool2 1s 1;
+}
+.timetransition {
+    transition: ease 1s;
+}
+@keyframes cool2{
+    0% { 
+        opacity: 0;
+        transform: translateX(400px);
+     }
+    100% {
+        opacity: 100;
+        transform: translateX(-0px);
+    }
+}
+
+.containerarticles {
+    overflow: hidden;
+}
+
+
+.transitiontopbottom {
+    animation: topbottom 1s 1;
+}
+@keyframes topbottom{
+    0% { 
+        opacity: 0;
+        transform: translateY(-400px);
+     }
+    100% {
+        opacity: 100;
+        transform: translateY(0px);
+    }
+}

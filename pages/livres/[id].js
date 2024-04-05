@@ -47,7 +47,7 @@ return (<>
     <section className={darkmode ? "containerarticles darkbg centerflex" : "containerarticles centerflex"}>
 
         {chargee  ?  <>
-        <div className='divcontainerdetailarticle'>
+        <div className='divcontainerdetailarticle transitiontopbottom'>
             <div><img src={book.image_url} alt="" className='imgbookdetail' /></div>
             <div className='rightinfodetails'>
                 <h1 className={darkmode ? "pwhite mb20px" : "pblack mb20px"} >{book.title}</h1>
