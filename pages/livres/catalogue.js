@@ -72,7 +72,7 @@ export default function Article() {
     // const [currentPageState, setcurrentPageState] = useState(1)
 return ( <>
     <Navbar />
-
+    
     <section className={darkmode ? "containerarticles darkbg" : "containerarticles"}>
         <div className='centerinput transitiontopbottom'>
             <input type="text" onChange={(e)=>{setSearh(e.target.value)}} className='inputsearch' placeholder="Recherchez un livre" />
@@ -101,9 +101,14 @@ return ( <>
     data        .filter((book) => book.title.toLowerCase().includes(search.toLowerCase()))
         .sort((a, b) => bookfilter === "az" ? a.title.localeCompare(b.title) : 0)
         .map((book, index) => (           
-        canishow(book) &&       
+        canishow(book) &&     
+          
             <div key={index} className={darkmode ? "card pinkshadow transitionrighttoleft" : "card greyshadow transitionrighttoleft"}>
                 <Link key={index} href={"/livres/"+book.id}>
+
+                {/* <p className='pwhite'>{book.like ? "true" :"false"}</p>
+                <p className='pblack'>{book.like==true ? "true" :"false"}</p> */}
+
                 <img src={book.image_url} className="cardimg" alt={book.title} /></Link>
                 <div className="infocard">
                     <p id='title' className={darkmode ? "textaligncenter pwhite" : "textaligncenter pblack"}>{book.title}</p>
@@ -127,11 +132,15 @@ return ( <>
                     {/* ajouter au favori  */}
 
                     <button className=' addtocart' onClick={  (e)=>{
-                    dispatch(addtofavori({id: book.id, img: book.image_url,title: book.title,}) 
+                    dispatch(addtofavori({id: book.id, img: book.image_url, title: book.title, 
+                    
+                        like : true  })
+
                     ), removebgred(e) }} ><FaHeart onClick={(e)=>{removebgred3(e)}} />
                     
                     </button></>
                     }
+                    
                 </div>
                 
             </div>

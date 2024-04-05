@@ -51,12 +51,14 @@ function removebgred3(e) {
 
 return (<>
     <Navbar />
+    {/* <p>{book.like ? "true" : "false"}</p> */}
     <section className={darkmode ? "containerarticles darkbg centerflex" : "containerarticles centerflex"}>
 
         {chargee  ?  <>
         <div className='divcontainerdetailarticle transitiontopbottom'>
             <div><img src={book.image_url} alt="" className='imgbookdetail' /></div>
             <div className='rightinfodetails'>
+                
                 <h1 className={darkmode ? "pwhite mb20px" : "pblack mb20px"} >{book.title}</h1>
                 <p  className={darkmode ? " pwhite mb20px" : " pblack mb20px"}>Pages : {book.num_pages}</p>
                 <p  className={darkmode ? " pwhite mb20px" : " pblack mb20px"}>Notes : {book.rating} <AiFillStar className={darkmode ? "yellow" :"lightstar"} /></p>
@@ -77,10 +79,25 @@ return (<>
                      >Ajouter au panier</button>
 
                      {/* ajouter aux favoris */}
-                    <button className='addtocart' onClick={  (e)=>{
-                    dispatch(addtofavori({id: book.id, img: book.image_url, title: book.title,})),
+                    <button className={book.like==true ? "addtocart heart" : "addtocart"} onClick={  (e)=>{
+                    dispatch(addtofavori({id: book.id, 
+                    img: book.image_url, 
+                    title: book.title,
+                    like : true})),
 
-                    removebgred(e)}} ><FaHeart /></button></>
+                    removebgred(e) }} >
+                    
+                    
+                    <FaHeart />
+                    
+                    
+                    </button>
+                    
+                    {/* <p className='pwhite'>{book.like==true ?"true" :"false"}</p>
+                    <p className='pblack'>{book.like==true ?"true" :"false"}</p> */}
+                    
+                    </>
+                    
                     }
             </div>
         </div>

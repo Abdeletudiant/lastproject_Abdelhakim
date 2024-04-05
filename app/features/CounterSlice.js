@@ -11,7 +11,7 @@ export const counterSlice = createSlice({
         basededonnee : [ {username: "test", password: "test"}  ], 
         
 
-        isconnected: false,
+        isconnected: true,
         prixtotal: 0,
         panier: [],
         favoris : [],
@@ -65,21 +65,24 @@ export const counterSlice = createSlice({
                 const element = state.favoris[index];
                 if(element.title == action.payload.title ) {
                     element.quantity += 1
+                    element.like = action.payload.like
                     state.prixtotal += element.price
                     favori_existe_deja = true
                 }
             }
 
             if (favori_existe_deja == false) {
-                    // console.log("je rajoute la quantité");
                     state.favoris.push({
                         id: action.payload.id, 
                         img: action.payload.img,
                         title: action.payload.title,
                         price: action.payload.price,
                         quantity : 1,
+                        like : action.payload.like
                     })
+                    
                     state.prixtotal += action.payload.price
+                    
                 }
         },
         ajouter : (state, action) => {
