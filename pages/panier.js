@@ -13,6 +13,9 @@ export default function Panier() {
     const[payee,setPayee] = useState(false)
 
     const darkmode= useSelector((reducer) => reducer.counter.darkmode)
+
+
+    
 return(<>
     <Navbar />
     
@@ -52,9 +55,9 @@ return(<>
                     <div>
                         <p>{book.title}</p>
                         <p className='mb15px'>Quantity : {book.quantity}</p>
-                        <button onClick={()=>{dispatch(addone(index)) }} className='addtocart2' >+1</button>
-                        <button onClick={()=>{dispatch(removeonequantity(index))}} className='addtocart2'>-1</button>
-                        <button onClick={()=>{dispatch(removeproduct(index))}} className='addtocart2'>Delete</button>
+                        <button onClick={()=>{dispatch(addone(index)) }} className='addtocart2 mr20px' >+1</button>
+                        <button onClick={()=>{dispatch(removeonequantity(index))}} className='addtocart2 mr20px'>-1</button>
+                        <button onClick={()=>{dispatch(removeproduct(index))}} className='addtocart2 mr20px'>Delete</button>
                     </div>
                 </div>
             ))}

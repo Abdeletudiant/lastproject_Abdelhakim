@@ -62,14 +62,11 @@ export default function Article() {
     }
 
     function removebgred(e) {
-        e.target.classList.remove('heart');        
+        e.target.classList.add('heart');        
     }
-    // function removebgred2(e) {
-    //     e.target.classList.remove('heart');        
-    // }
     function removebgred3(e) {
-        e.target.parentElement.classList.remove('heart');    
-        e.target.parentElement.parentElement.classList.remove('heart');     
+        e.target.parentElement.classList.add('heart');    
+        e.target.parentElement.parentElement.classList.add('heart');     
     }
 
     // const [currentPageState, setcurrentPageState] = useState(1)
@@ -125,12 +122,15 @@ return ( <>
                         }) 
                     )}}
                      >Ajouter au panier</button>
-                    <button className='heart addtocart' onClick={  (e)=>{dispatch(addtofavori({
-                        id: book.id, 
-                        img: book.image_url,
-                        title: book.title,
-                        }) 
-                    ), removebgred(e) }} ><FaHeart onClick={(e)=>{removebgred3(e)}} /></button></>
+
+
+                    {/* ajouter au favori  */}
+
+                    <button className=' addtocart' onClick={  (e)=>{
+                    dispatch(addtofavori({id: book.id, img: book.image_url,title: book.title,}) 
+                    ), removebgred(e) }} ><FaHeart onClick={(e)=>{removebgred3(e)}} />
+                    
+                    </button></>
                     }
                 </div>
                 

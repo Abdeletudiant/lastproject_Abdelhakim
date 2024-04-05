@@ -9,7 +9,7 @@ export default function Favori() {
 
     const darkmode= useSelector((reducer) => reducer.counter.darkmode)
 
-    // spanier containerarticles darkbg 
+
 return(<>
     <Navbar />
     <section className={darkmode ? "spanier containerarticles darkbg" : "spanier containerarticles"}>

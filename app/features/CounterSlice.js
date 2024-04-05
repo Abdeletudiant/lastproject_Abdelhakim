@@ -31,12 +31,11 @@ export const counterSlice = createSlice({
                     state.basededonnee.push({username: action.payload.username, password: action.payload.password, })
                 }
             }
-            // state.newusername = action.payload.username
-            // state.newpassword = action.payload.password
-            // state.isconnected = true
         },
         disconnect: (state) => {
             state.isconnected = false
+            state.panier= []
+            state.favoris = []
         },
         seconnecter : (state, action) => {
             for (let index = 0; index < state.basededonnee.length; index++) {
@@ -45,16 +44,6 @@ export const counterSlice = createSlice({
                     state.isconnected = true
                 }
             }
-            
-            // if (user_existe_deja == false) {
-            //     state.basededonnee.push({username: action.payload.username, password: action.payload.password, })
-            // }
-
-            // if(action.payload.username === "test" && action.payload.password === "test") {
-            //     state.isconnected = true
-            // }else {
-            //     state.isconnected = false
-            // }
         },
         changetheme : (state) => {
             if(state.darkmode == true) {
@@ -94,10 +83,7 @@ export const counterSlice = createSlice({
                 }
         },
         ajouter : (state, action) => {
-            // console.log(state.panier);
-            // state.prixtotal = 0
             let existe_deja = false
-            // si le produit existe pas ne pas l'ajouter
             for (let index = 0; index < state.panier.length; index++) {
                 const element = state.panier[index];
                 if(element.title == action.payload.title ) {

@@ -654,3 +654,8 @@ li {list-style: none; list-style-type: none;}
         transform: translateY(0px);
     }
 }
+
+
+.mr20px {
+    margin-right: 20px;
+}

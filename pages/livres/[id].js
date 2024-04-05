@@ -11,11 +11,18 @@ import Link from 'next/link';
 export default function ArticlePage() {
   const router = useRouter();
   const [data, setData] = useState([]);
+  function removebgred(e) {
+    e.target.classList.add('heart');        
+}
+function removebgred3(e) {
+    e.target.parentElement.classList.add('heart');    
+    e.target.parentElement.parentElement.classList.add('heart');     
+}
+
   const [chargee, setChargee] = useState(false);
   const dispatch = useDispatch();
   const darkmode= useSelector((reducer) => reducer.counter.darkmode)
   const isconnected= useSelector((reducer) => reducer.counter.isconnected)
-  
   useEffect(() => {
     fetch("https://example-data.draftbit.com/books")
       .then((response) => response.json())
@@ -68,12 +75,12 @@ return (<>
                         }) 
                     )}}
                      >Ajouter au panier</button>
-                    <button className='heart addtocart' onClick={  ()=>{dispatch(addtofavori({
-                        id: book.id, 
-                        img: book.image_url,
-                        title: book.title,
-                        }) 
-                    )}} ><FaHeart /></button></>
+
+                     {/* ajouter aux favoris */}
+                    <button className='addtocart' onClick={  (e)=>{
+                    dispatch(addtofavori({id: book.id, img: book.image_url, title: book.title,})),
+
+                    removebgred(e)}} ><FaHeart /></button></>
                     }
             </div>
         </div>
